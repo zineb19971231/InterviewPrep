@@ -2,7 +2,7 @@
 
 Application Laravel pour préparer vos entretiens techniques. Organisez vos connaissances par domaines, suivez votre progression et générez des questions d'entraînement avec l'IA.
 
-![Dashboard](https://via.placeholder.com/800x400/1e293b/94a3b8?text=Dashboard)
+<img width="1885" height="917" alt="image" src="https://github.com/user-attachments/assets/6dc3c293-ee07-4da3-9a5d-a42fc355d8d8" />
 
 ## Fonctionnalités
 
