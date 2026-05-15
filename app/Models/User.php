@@ -7,6 +7,8 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -22,6 +24,16 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    public function domains(): HasMany
+    {
+        return $this->hasMany(Domain::class);
+    }
+
+    public function concepts(): HasManyThrough
+    {
+        return $this->hasManyThrough(Concept::class, Domain::class, 'user_id', 'domain_id', 'id', 'id');
+    }
+
     protected function casts(): array
     {
         return [

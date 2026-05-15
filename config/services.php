@@ -28,6 +28,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'groq' => [
+        'api_key' => env('GROQ_API_KEY'),
+        'url' => 'https://api.groq.com/openai/v1/chat/completions',
+        'model' => env('GROQ_MODEL', 'llama-3.3-70b-versatile'),
+    ],
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
